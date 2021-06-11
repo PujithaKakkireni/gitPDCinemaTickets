@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>ticket bookings</title>
+  <link href=css/style.css rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <a href="" class="logo"><img src="image/movieticketlogo.png"></a>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About US</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a href="">Social Media Links</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section id="section1">
+    <ul>
+      <li><a href="movienames.html" >movies</a></li>
+      <li><a href="language.html">language</a></li>
+      <li><a href="theatres.html">theatre</a></li>
+    </ul>
+  </section>
+  <section id="section2">
+    <div class="row">
+      <div class="column" id="column1">
+        <ul id=column1list1>
+          <button onclick="window.location.href='login.html'" style="width:auto;">Login</button>
+          <button onclick="window.location.href='registration.html'" style="width:auto;">registration</button>
+        </ul>
+        <div id="lists">
+          show bookings
+          <ul>
+            <li><a href="booking.html">booking</a></li>
+          </ul>
+          <p>geo location</p>
+</div>
+<button onclick="getLocation()">location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+      </div>
+      <div class="column" id="column2">
+        <div id="column2header">Featured Contents</div>
+        <div id="column2list">
+          <p>movie poster</p>
+          <ul>
+            <li><button onclick="window.location.href='poster.html'" style="width:auto;">drag and drop your favourite poster</button></li>
+          </ul>
+</div>
+      </div>
+      <div class="column" id="column3">
+        <div id="column3header">New releases</div>
+        <div id="column3list">
+          <ul>
+            <li><a href="movienames.html" >movies</a></li>
+            <li><a href="language.html">language</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+    cinematicket @2020 All Rights Reserved
+    <div id="footerlist">
+      <ul>
+        <li><a href="">location</a></li>
+        <li><a href="">Terms&Conditions</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">About Us</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

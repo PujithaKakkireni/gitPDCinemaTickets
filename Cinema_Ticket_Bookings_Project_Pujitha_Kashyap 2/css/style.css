@@ -1,0 +1,152 @@
+*,html,body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: deepskyblue;
+  height: 150px;
+  line-height: 200px;
+  border-bottom: 5px solid;
+  padding-bottom: 3px;
+}
+header a img{
+  height: 150px;
+}
+header nav ul{
+  list-style: none;
+}
+header nav ul li{
+  display: inline-block;
+}
+header nav{
+  padding-left: 400px;
+}
+header nav ul li a{
+  padding-right: 30px;
+  font-weight: bold;
+  color: black;
+  transition: 0.5s ease-in;
+}
+header nav ul li a:hover{
+  text-decoration: none;
+  color: lightgreen;
+}
+#section1 ul{
+  list-style: none;
+}
+#section1 ul li{
+  display: inline-block;
+}
+#section1{
+  padding-left: 300;
+  height: 30px;
+  border-bottom: 5px solid;
+  padding-bottom: 3px;
+}
+#section1 ul li a{
+  padding-right: 30px;
+  font-weight: bold;
+  color: black;
+  transition: 0.5s ease-in;
+}
+#section1 ul li a:hover{
+  text-decoration: none;
+  color: deepskyblue;
+}
+#column1list1{
+  list-style: none;
+  border-bottom: 5px solid;
+}
+#column1list1 li{
+  display: inline-block;
+}
+#column1list1 li a{
+  padding-right: 30px;
+  font-weight: bold;
+  color: red;
+  transition: 0.5s ease-in;
+}
+#column1list1 li a:hover{
+  text-decoration: none;
+  color: green;
+}
+#lists ul{
+  list-style: square;
+}
+#lists ul li a{
+  padding-right: 5px;
+  font-weight: bold;
+  color: black;
+  transition: 0.5s ease-in;
+}
+#lists ul li a:hover{
+  text-decoration: none;
+  color: deepskyblue;
+}
+.column{
+  height: 500px;
+  width: 33.33%;
+  border-bottom: 5px solid;
+  border-left: 2.5px solid;
+  border-right: 2.5px solid;
+}
+.row:after{
+  display: table;
+  clear: both;
+}
+#column1{
+  padding-left: 30px;
+}
+#lists{
+  color: black;
+  font-weight: bold;
+}
+#column2{
+  padding-left: 40px;
+  font-weight: bold;
+}
+#column2header{
+  color: red;
+  font-weight: bold;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+#column2list{
+  padding-left: 10px;
+}
+#column2list ul{
+  list-style: none;
+}
+#column2list ul li{
+  padding-bottom: 30px;
+}
+#column2list ul li a{
+  color: black;
+}
+#column3header{
+  color: red;
+  font-weight: bold;
+  padding-left: 150px;
+  padding-bottom: 40px;
+}
+#column3list{
+  padding-left: 30px;
+}
+#column3list ul{
+  list-style: none;
+}
+#column3list ul li{
+  padding-bottom: 30px;
+}
+#column3list ul li a{
+  color: black;
+}
+#footerlist ul li a{
+  color: black;
+}
+#footerlist ul{
+  list-style: none;
+}
+#footerlist ul li{
+  display: inline-block;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<Html>
+<head>
+<title>
+Registration Page
+</title>
+</head>
+<script>
+document.getElementById("check").onclick = function() {
+  let allAreFilled = true;
+  document.getElementById("myForm").querySelectorAll("[required]").forEach(function(i) {
+    if (!allAreFilled) return;
+    if (!i.value) allAreFilled = false;
+    if (i.type === "radio") {
+      let radioValueCheck = false;
+      document.getElementById("myForm").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+        if (r.checked) radioValueCheck = true;
+      })
+      allAreFilled = radioValueCheck;
+    }
+  })
+  if (!allAreFilled) {
+    alert('Fill all the fields');
+  }
+};
+</script>
+<body bgcolor="lightblue">
+<br>
+<br>
+<form>
+
+<label for="username"> username:* </label>
+<input type="text" id="username" name="username" maxlength="8" required> <br> <br>
+<label for="pwd">Password:*</label>
+<input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> <br>
+<br> <br>
+<label> Firstname: </label>
+<input type="text" name="firstname" size="15"/> <br> <br>
+<label> Middlename: </label>
+<input type="text" name="middlename" size="15"/> <br> <br>
+<label> Lastname:* </label>
+<input type="text" name="lastname" size="15" required/> <br> <br>
+<label>Gender*</label>
+<select name="Gender" required>
+<option value="">select gender</option>
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="other">other</option>
+</select>
+<br>
+<br>
+<label for="phone">Enter your phone number:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+<br><br>
+street Address:*
+<br>
+<textarea cols="80" rows="5" value="address" required>
+</textarea>
+<br> <br>
+<label> city* </label>
+<input type="text" name="city" size="15" required/> <br> <br>
+<label> state* </label>
+<input type="text" name="state" size="15" required/> <br> <br>
+<label> zip code* </label>
+<input type="text" name="zip code" size="15" required/> <br> <br>
+Email:*
+<input type="email" id="email" name="email" required/> <br>
+<br> <br>
+<label> country of origin:* </label>
+<input type="text" name="country of origin" size="15" required/> <br> <br>
+<label> date of birth:* </label>
+<input type="date" id="date of birth" name="date of birth" required/> <br> <br>
+<label> member organisation: </label>
+<input type="text" name="member organisation" required/> <br> <br>
+<button onclick="window.location.href='login.html'" style="width:auto;">submit</button>
+</form>
+</body>
+</html>
+
